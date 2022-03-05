@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BP | Register</title>
+
+    <link rel="stylesheet" href="./assets/css/register.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c4b7891002.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <h2>BP Café</h2>
+        <nav class="navBar">
+            <ul class="navBarItemList">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#developers">Developers</a></li>
+                <li class="gsbtn"><a href="/login.html">Get Started</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main data-aos="zoom-in">
+        <h2>Welcome to BP Café!</h2>
+        <form class="loginForm" method="post" action="login.php">
+            <div class="inputGrp">
+                <label for="name">Name</label>
+                <input type="text" name="userName" id="name">
+            </div>
+
+            <div class="inputGrp">
+                <label for="email">Email</label>
+                <input type="email" name="userEmail" id="userEmail">
+            </div>
+
+            <div class="inputGrp">
+                <label for="password">Password</label>
+                <div class="passwordField">
+                    <input type="password" name="userPassword" id="password">
+                    <button type="button" onclick="changePasswordType()">
+                        <i id="eyeIcon" class="fas fa-eye-slash"></i>
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit" class="loginBtn">Register</button>
+            <p>Already have and account? <a href="login.html">Login</a></p>
+        </form>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        const icon = document.getElementById('eyeIcon');
+
+        function changePasswordType() {
+            var x = document.getElementById("password");
+            if (x.type === "password") {
+                icon.classList.add('fa-eye');
+                icon.classList.remove('fa-eye-slash');
+                x.type = "text";
+            } else {
+                icon.classList.add('fa-eye-slash');
+                icon.classList.remove('fa-eye');
+                x.type = "password";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

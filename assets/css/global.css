@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #eaecfc;
+  width: 100vw;
+  overflow-x: hidden;
+  padding-top: 10vh;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  background: #f0f3ff;
+  box-shadow: 1px 5px 7px #9ea4e5;
+  padding: 20px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: calc(100vw - 40px);
+}
+
+.header h2 {
+  font-size: 21.8w;
+  font-weight: bold;
+  color: #2e3d5e;
+}
+
+.header .navBar {
+  display: flex;
+  align-items: center;
+}
+
+.header .navBar .navBarItemList {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.header .navBar .navBarItemList > li > a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1vw;
+}
+
+.header .navBar .navBarItemList > .gsbtn {
+  background: #2e3d5e;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.1vw;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header .navBar .navBarItemList > .gsbtn > a {
+  color: #fff;
+}
+
+.header .navBar .navBarItemList > .gsbtn:hover {
+  background: #2e3d5eb0;
+}
+
+.header .navBar .navBarItemList > .gsbtn > a:hover {
+  color: #fff;
+}
+
+.header .navBar .navBarItemList li a:hover {
+  color: #2e3d5e;
+}
+
+.footer {
+  background: #f0f3ff;
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

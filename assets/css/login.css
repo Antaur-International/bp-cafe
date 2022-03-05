@@ -1,0 +1,93 @@
+body {
+  display: grid;
+  place-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 10vh);
+}
+
+main .loginForm {
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 2px 7px 10px -1px rgba(84, 81, 251, 0.28);
+}
+
+main .loginForm .inputGrp {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+main .loginForm .inputGrp > .passwordField {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 8px;
+  background-color: white;
+  border-bottom: 1px solid #2e3d5e;
+  border-radius: 5px;
+}
+
+main .loginForm .inputGrp > .passwordField > button {
+  background: none;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 1.1vw;
+}
+
+main .loginForm .inputGrp > .passwordField input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 8px;
+  font-size: 1vw;
+  color: #2e3d5e;
+}
+
+main .loginForm .inputCheckGrp {
+  display: flex;
+  gap: 8px;
+}
+
+main .loginForm .inputGrp > input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #2e3d5e;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 1vw;
+  color: #2e3d5e;
+}
+
+main .loginForm > button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 1.1vw;
+  color: #2e3d5e;
+  background: #edeffc;
+  box-shadow: 2px 7px 10px -1px rgba(84, 81, 251, 0.28);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+main .loginForm > button:hover {
+  background: #2e3d5e;
+  color: #ffffff;
+}

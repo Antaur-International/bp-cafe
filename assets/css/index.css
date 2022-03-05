@@ -1,0 +1,82 @@
+/* Main Section Coding */
+
+main > .landing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60vh;
+  padding: 0 30px;
+  margin-bottom: 20vh;
+}
+
+main > .landing > h1 {
+  width: 20vw;
+  font-size: 4vw;
+  font-weight: bold;
+  color: #2e3d5e;
+}
+
+main > .landing > img {
+  width: 40vw;
+}
+
+main > .developers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20vh;
+}
+
+main > .developers > h2 {
+  font-size: 1.8vw;
+  font-weight: bold;
+  color: #2e3d5e;
+}
+
+main > .developers > .cardList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+main > .developers > .cardList > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #edeffc;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  box-shadow: 2px 7px 10px -1px rgba(84, 81, 251, 0.28);
+  border-radius: 10px;
+}
+
+main > .developers > .cardList > li > img {
+  width: 250px;
+  border-radius: 10px 10px 0 0;
+}
+
+main > .developers > .cardList > li > p {
+  font-size: 1.1vw;
+  font-weight: bold;
+  color: #2e3d5e;
+  margin: 10px 0;
+}
+
+main > .developers > .cardList > li > .linkList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+main > .developers > .cardList > li > .linkList > li > a {
+  font-size: 1.3vw;
+  text-decoration: none;
+  color: #000;
+}
