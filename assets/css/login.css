@@ -91,3 +91,8 @@ main .loginForm > button:hover {
   background: #2e3d5e;
   color: #ffffff;
 }
+
+main .loginForm > .changeForm > a {
+  color: #2e3d5e;
+  text-decoration: none;
+}
