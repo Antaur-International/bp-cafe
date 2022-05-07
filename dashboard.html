@@ -18,11 +18,13 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c4b7891002.js" crossorigin="anonymous"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
-    <nav class="sideNav">
+    <nav class="sideNav" data-aos="zoom-in-right">
         <img src="./assets/images/svg/logo.svg" />
         <ul class="sideNavList">
             <li style="color: #1B37A0;">
@@ -53,28 +55,28 @@
     </nav>
 
     <main class="main">
-        <div class="userArea">
-            <h2>Good Morning, Bedant Hota</h2>
+        <div class="userArea" data-aos="zoom-in-up">
+            <h2 id="userGreeting">Good Morning, Bedant Hota</h2>
             <img src="https://via.placeholder.com/50" alt="">
         </div>
-        <div class="newOrder">
+        <div class="newOrder" data-aos="zoom-in-up">
             <button>
                 Place a order
             </button>
         </div>
         <section class="orderQueue">
             <ul class="orderQueue">
-                <li class="orderTrack readyStats">
+                <li class="orderTrack readyStats" data-aos="zoom-in-up">
                     <p class="orderNumber">Order Number</p>
                     <p class="orderId">#234458</p>
                     <p class="orderStatus">Ready</p>
                 </li>
-                <li class="orderTrack beingBaked">
+                <li class="orderTrack beingBaked" data-aos="zoom-in-up">
                     <p class="orderNumber">Order Number</p>
                     <p class="orderId">#234458</p>
                     <p class="orderStatus">Being baked</p>
                 </li>
-                <li class="orderTrack inQueue">
+                <li class="orderTrack inQueue" data-aos="zoom-in-up">
                     <p class="orderNumber">Order Number</p>
                     <p class="orderId">#234458</p>
                     <p class="orderStatus">In queue</p>
@@ -82,7 +84,31 @@
             </ul>
         </section>
     </main>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
 
+        const userGreeting = document.querySelector('#userGreeting');
+
+
+
+        window.onload = (e) => {
+            const today = new Date();
+            const hour = today.getHours();
+
+            // get name form cookie
+            const name = localStorage.getItem('staffName');
+
+
+            if (hour < 12) {
+                userGreeting.innerHTML = `Good Morning, ${name}`;
+            } else if (hour < 18) {
+                userGreeting.innerHTML = `Good Afternoon, ${name}`;
+            } else {
+                userGreeting.innerHTML = `Good Evening, ${name}`;
+            }
+        }
+    </script>
 </body>
 
 </html>
